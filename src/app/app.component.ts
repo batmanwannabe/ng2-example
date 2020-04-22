@@ -20,7 +20,11 @@ export class AppComponent  {
     },
     email: {
       title: 'Email'
-    }
+    },
+          link: {
+        title: 'Link',
+        type: 'html'
+          }
   }
 };
 data = [
@@ -28,13 +32,15 @@ data = [
     id: 1,
     name: "Leanne Graham",
     username: "Bret",
-    email: "Sincere@april.biz"
+    email: "Sincere@april.biz",
+    link: '<a href="http://www.google.com">Google</a>',
   },
   {
     id: 2,
     name: "Ervin Howell",
     username: "Antonette",
-    email: "Shanna@melissa.tv"
+    email: "Shanna@melissa.tv",
+    link: '<a href="http://www.google.com">Google</a>',
   },
   
   // ... list of items
@@ -43,7 +49,8 @@ data = [
     id: 11,
     name: "Nicholas DuBuque",
     username: "Nicholas.Stanton",
-    email: "Rey.Padberg@rosamond.biz"
+    email: "Rey.Padberg@rosamond.biz",
+    link: '<a href="http://www.google.com">Google</a>',
   }
 ];
 }
