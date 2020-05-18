@@ -1,68 +1,194 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  selector: "my-app",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
-
-export class AppComponent  {
-  name = 'Angular';
- data = [
+export class AppComponent {
+  name = "Angular";
+  data = [
     {
-      siteName: 'WP Product Data Portal',
-      manufacturerName:[ 
-        {name: 'American Force ATV', status: true},
-        {name:'American Racing', status: true},
-        {name:'Asant Off Road', status: true},
-        {name:'Fairway Allows',status: true}],
-        status:[ 
-        {name: 'American Force ATV', status: true},
-        {name:'American Racing', status: true},
-        {name:'Asant Off Road', status: true},
-        {name:'Fairway Allows',status: true}]
-    },
+      parentBrand: "WP Product Data Portal",
+      childBrands: [
         {
-      siteName: 'WP Data Portal',
-      manufacturerName:[ 
-        {name: 'American Force ATV', status: true},
-        {name:'American Racing', status: true},
-        {name:'Asant Off Road', status: true},
-        {name:'Fairway Allows',status: true}],
-        status:[ 
-        {name: 'American Force ATV', status: true},
-        {name:'American Racing', status: true},
-        {name:'Asant Off Road', status: true},
-        {name:'Fairway Allows',status: true}]
+          name: "American Force ATV",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "American Racing",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Asant Off Road",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Fairway Allows",
+          countries: ["usa", "canada", "india"],
+          status: true
+        }
+      ],
+      status: [
+        {
+          name: "American Force ATV",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "American Racing",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Asant Off Road",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Fairway Allows",
+          countries: ["usa", "canada", "india"],
+          status: true
+        }
+      ],
+      techFields: [
+        {
+          name: "American Force ATV",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "American Racing",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Asant Off Road",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Fairway Allows",
+          countries: ["usa", "canada", "india"],
+          status: true
+        }
+      ]
+    },
+    {
+      parentBrand: "WP Data Portal",
+      childBrands: [
+        {
+          name: "American Force ATV",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "American Racing",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Asant Off Road",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Fairway Allows",
+          countries: ["usa", "canada", "india"],
+          status: true
+        }
+      ],
+      status: [
+        {
+          name: "American Force ATV",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "American Racing",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Asant Off Road",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Fairway Allows",
+          countries: ["usa", "canada", "india"],
+          status: true
+        }
+      ],
+      techFields: [
+        {
+          name: "American Force ATV",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "American Racing",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Asant Off Road",
+          countries: ["usa", "canada", "india"],
+          status: true
+        },
+        {
+          name: "Fairway Allows",
+          countries: ["usa", "canada", "india"],
+          status: true
+        }
+      ]
     }
   ];
 
   settings = {
     columns: {
-      siteName: {
-        title: 'Site Name',
+      parentBrand: {
+        title: "Parent Brand"
       },
-      manufacturerName: {
-        title: 'Manufacturer Name',
-        type: 'html',
-        valuePrepareFunction: (value) => {
-          let returnHtml = '';
-          value.forEach(function(item){
-            returnHtml += `<a href="#">${item.name}</a> <br/> <br/> `
+      childBrands: {
+        title: "Child Brands",
+        type: "html",
+        valuePrepareFunction: value => {
+          let returnHtml = "";
+          value.forEach(function(item) {
+            returnHtml += `<a href="#">${item.name}</a> <br/> <br/> `;
           });
-        return returnHtml;
-      }
+          return returnHtml;
+        }
       },
-            status: {
-        title: 'Status',
-        type: 'html',
-        valuePrepareFunction: (value) => {
-          let returnHtml = '';
-          value.forEach(function(item){
-            returnHtml += `${item.status}<br/> <br/> `
+      status: {
+        title: "Status",
+        type: "html",
+        valuePrepareFunction: value => {
+          let returnHtml = "";
+          value.forEach(function(item) {
+            returnHtml += `${item.status}<br/> <br/> `;
           });
-        return returnHtml;
-      }
+          return returnHtml;
+        }
+      },
+      techFields: {
+        title: "Status",
+        type: "html",
+        valuePrepareFunction: value => {
+          let returnHtml = "";
+          value.forEach(function(item) {
+            returnHtml += '<div class="boxed">'
+            item.countries.forEach(function(country) {
+              returnHtml += `  ${country}  `;
+            });
+            returnHtml += '</div> <br/>'
+          });
+          return returnHtml;
+        }
       }
     }
   };
