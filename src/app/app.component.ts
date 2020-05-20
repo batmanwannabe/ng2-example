@@ -181,9 +181,9 @@ export class AppComponent {
         valuePrepareFunction: value => {
           let returnHtml = "";
           value.forEach(function(item) {
-            returnHtml += '<div class="boxed">'
+            returnHtml += '<div>'
             item.countries.forEach(function(country) {
-              returnHtml += `  ${country}  `;
+              returnHtml += ` <div class="boxed">${country}</div>`;
             });
             returnHtml += '</div> <br/>'
           });

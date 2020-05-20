@@ -1,1 +1,13 @@
 /* Add application styles & imports to this file! */
+
+.boxed {
+   background-color: gray ;
+ color:white;
+  border: 1px solid green ;
+  width: 30px;
+    background-position: left top;
+  background-repeat: repeat;
+  border-radius: 10px;
+  height:15px;
+  display: inline;
+}
