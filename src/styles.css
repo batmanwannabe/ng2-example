@@ -3,11 +3,11 @@
 .boxed {
    background-color: gray ;
  color:white;
-  border: 1px solid green ;
+  border: 1px solid gray ;
   width: 30px;
     background-position: left top;
   background-repeat: repeat;
-  border-radius: 10px;
-  height:15px;
+  border-radius: 8px;
+  height:25px;
   display: inline;
 }
