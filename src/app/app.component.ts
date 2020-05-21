@@ -9,7 +9,7 @@ export class AppComponent {
   name = "Angular";
   data = [
     {
-      parentBrand: "WP Product Data Portal",
+      name: "WP Product Data Portal",
       childBrands: [
         {
           name: "American Force ATV",
@@ -78,7 +78,7 @@ export class AppComponent {
       ]
     },
     {
-      parentBrand: "WP Data Portal",
+      name: "WP Data Portal",
       childBrands: [
         {
           name: "American Force ATV",
@@ -150,7 +150,7 @@ export class AppComponent {
 
   settings = {
     columns: {
-      parentBrand: {
+      name: {
         title: "Parent Brand"
       },
       childBrands: {
